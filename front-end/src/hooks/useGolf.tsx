@@ -144,6 +144,8 @@ export const GolfProvider = ({ children }: { children: React.ReactNode }) => {
       score: score,
       golferSelect: selectGolfer,
       team: selectTeam as ITeam,
+      team_0_logo: teams.find(t => t._id === selectMatch.team_0)?.logo || '',
+      team_1_logo: teams.find(t => t._id === selectMatch.team_1)?.logo || '',
     };
     saveMutate(
       {

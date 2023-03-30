@@ -46,4 +46,6 @@ export interface ISaveInput {
   golferSelect: string;
   hole: HoleSelect;
   score: number;
+  team_0_logo: string;
+  team_1_logo: string;
 }

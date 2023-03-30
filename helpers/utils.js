@@ -155,7 +155,7 @@ module.exports = {
     }
   },
   convertData: async (data) => {
-    const { match, hole, score, team, golferSelect } = data;
+    const { match, hole, score, team, golferSelect, team_0_logo, team_1_logo } = data;
     const redis = RedisContext.getConnect();
 
     /** setup User */
@@ -209,6 +209,8 @@ module.exports = {
     /** setup result */
     const result = {
       Match: match.name,
+      "Logo-T1": team_0_logo,
+      "Logo-T2": team_1_logo,
       "G1-Team-01": golfer1,
       "G2-Team-01": typeof golfer2 === "string" ? golfer2 : "",
       "G1-Team-02": golfer3,
